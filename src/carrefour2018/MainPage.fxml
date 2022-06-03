@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="1365.0" style="-fx-background-color: #1C103C;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrefour2018.MainPageController">
+    <stylesheets>
+        <URL value="@mainpage.css" />
+    </stylesheets>
+   <children>
+      <MediaView fx:id="MediaView" fitHeight="710.0" fitWidth="1200.0" layoutY="7.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="160.0" layoutY="112.0" prefHeight="413.0" prefWidth="264.0">
+         <children>
+            <Text fx:id="textC4" fill="#1537bf" onMouseEntered="#textEnter" onMouseExited="#textExit" strokeType="OUTSIDE" strokeWidth="0.0" text="C4" textAlignment="CENTER" wrappingWidth="263.13671875">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="14.88" surfaceScale="3.36">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Text>
+            <VBox prefHeight="88.0" prefWidth="237.0">
+               <children>
+                  <JFXButton fx:id="btnAdd" onAction="#btnGoToAddEmployeePage" onMouseEntered="#addEnter" onMouseExited="#addExit" prefHeight="83.0" prefWidth="266.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="Add Employee" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="57.0" prefHeight="88.0" prefWidth="237.0">
+               <children>
+                  <JFXButton fx:id="btnSearch" onAction="#gotoSerachPage" onMouseEntered="#searchEnter" onMouseExited="#searchExit" prefHeight="83.0" prefWidth="266.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="Search for Employees" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="145.0" prefHeight="88.0" prefWidth="237.0">
+               <children>
+                  <JFXButton fx:id="btnShow" onAction="#soowAllEmployeesPage" onMouseEntered="#showEnter" onMouseExited="#showExit" prefHeight="83.0" prefWidth="266.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="Show All Employees" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="233.0" prefHeight="88.0" prefWidth="237.0">
+               <children>
+                  <JFXButton fx:id="btnVacation" onMouseEntered="#vacEnter" onMouseExited="#vacExit" prefHeight="83.0" prefWidth="266.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="Vacation Request" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="626.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@5.png" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.23" height="68.44" radius="16.61" width="0.0" />
+         </effect>
+      </ImageView>
+      <FontAwesomeIcon fill="#f5f5f5" iconName="USER_PLUS" layoutX="114.0" layoutY="225.0" size="3em" stroke="#d00909" />
+      <FontAwesomeIcon fill="#f5f5f5" iconName="SEARCH" layoutX="114.0" layoutY="312.0" size="3em" stroke="#d00909" />
+      <FontAwesomeIcon fill="#f5f5f5" iconName="EYE" layoutX="114.0" layoutY="407.0" size="3em" stroke="#d00909" />
+      <FontAwesomeIcon fill="#f5f5f5" iconName="PLANE" layoutX="115.0" layoutY="488.0" size="3em" stroke="#d00909" />
+   </children>
+</AnchorPane>

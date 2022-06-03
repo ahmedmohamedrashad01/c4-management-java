@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="1365.0" style="-fx-background-color: #8BC9EC;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrefour2018.EmployeesSearchController">
+   <children>
+      <Label alignment="CENTER" layoutX="490.0" layoutY="14.0" prefHeight="30.0" prefWidth="386.0" text="Choose The Best Way for You to Search" textFill="#250404">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <FontAwesomeIcon iconName="CREDIT_CARD" layoutX="223.0" layoutY="75.0" size="3em" />
+      <FontAwesomeIcon iconName="FILE" layoutX="876.0" layoutY="73.0" size="2.8em" />
+      <RadioButton fx:id="id" contentDisplay="CENTER" layoutX="326.0" layoutY="46.0" mnemonicParsing="false" onAction="#selectByID" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF22; -fx-background-radius: 50px;" text="   ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="SelectIdOrName" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="name" contentDisplay="CENTER" layoutX="976.0" layoutY="48.0" mnemonicParsing="false" onAction="#SelectByName" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #FFFFFF22; -fx-background-radius: 50px;" text="   Name" toggleGroup="$SelectIdOrName">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <JFXTextField fx:id="txtId" alignment="CENTER" focusColor="#8bc9ec" labelFloat="true" layoutX="295.0" layoutY="106.0" prefHeight="36.0" prefWidth="182.0" promptText="   Enter Employee ID" style="-fx-background-color: #FFFFFF22; -fx-background-radius: 50PX;" unFocusColor="#8bc9ec">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIcon iconName="ARROW_RIGHT" layoutX="223.0" layoutY="133.0" size="3em" />
+      <FontAwesomeIcon iconName="ARROW_RIGHT" layoutX="876.0" layoutY="129.0" size="3em" />
+      <Pane layoutX="56.0" layoutY="151.0" prefHeight="551.0" prefWidth="1254.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;">
+         <children>
+            <Line endX="21.0" endY="309.0" layoutX="606.0" layoutY="225.0" startX="21.0" startY="-225.0" stroke="WHITE" strokeWidth="0.5" />
+            <Label alignment="CENTER" layoutX="288.0" layoutY="7.0" prefHeight="54.0" prefWidth="56.0" style="-fx-border-color: #FFF; -fx-border-radius: 50px;" text="ID" textFill="#cd2b2b" underline="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.68" specularConstant="0.77" specularExponent="27.44" surfaceScale="9.65">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#e4e2e2" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="919.0" layoutY="7.0" prefHeight="54.0" prefWidth="56.0" style="-fx-border-color: #FFF; -fx-border-radius: 50px;" text="Name" textFill="#cd2b2b" underline="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.68" specularConstant="0.77" specularExponent="27.44" surfaceScale="9.65">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#e4e2e2" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <JFXTextField fx:id="idFirstName" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="80.0" prefHeight="30.0" prefWidth="229.0" promptText="first name" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idLastName" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="336.0" layoutY="80.0" prefHeight="30.0" prefWidth="244.0" promptText="   last name" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idGrade" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="137.0" prefHeight="30.0" prefWidth="229.0" promptText="  grade" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idGender" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="336.0" layoutY="137.0" prefHeight="30.0" prefWidth="244.0" promptText="  gender" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idNationality" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="198.0" prefHeight="30.0" prefWidth="229.0" promptText="  nationality" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idQualification" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="336.0" layoutY="198.0" prefHeight="30.0" prefWidth="244.0" promptText="  qualification" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idPassport" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="252.0" prefHeight="30.0" prefWidth="229.0" promptText="  passport no" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idJoinDate" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="338.0" layoutY="252.0" prefHeight="30.0" prefWidth="235.0" promptText="  join date" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idMobile" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="310.0" prefHeight="30.0" prefWidth="229.0" promptText="  mobile no" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idDepartMent" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="336.0" layoutY="310.0" prefHeight="30.0" prefWidth="244.0" promptText="  department" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idSection" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="46.0" layoutY="368.0" prefHeight="30.0" prefWidth="229.0" promptText="  section" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="idPosition" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="336.0" layoutY="368.0" prefHeight="30.0" prefWidth="244.0" promptText="  position" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fx:id="idImage" fitHeight="143.0" fitWidth="219.0" layoutX="207.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXTextField fx:id="nameID" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="985.0" layoutY="80.0" prefHeight="30.0" prefWidth="229.0" promptText="   id" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameGrade" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="137.0" prefHeight="30.0" prefWidth="229.0" promptText="  grade" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameGender" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="970.0" layoutY="137.0" prefHeight="30.0" prefWidth="244.0" promptText="  gender" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameNationality" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="198.0" prefHeight="30.0" prefWidth="229.0" promptText="  nationality" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameQualification" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="970.0" layoutY="198.0" prefHeight="30.0" prefWidth="244.0" promptText="  qualification" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="namePassport" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="252.0" prefHeight="30.0" prefWidth="229.0" promptText="  passport no" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameJoinDate" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="972.0" layoutY="252.0" prefHeight="30.0" prefWidth="235.0" promptText="  join date" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameMobile" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="310.0" prefHeight="30.0" prefWidth="229.0" promptText="  mobile no" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameDepartment" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="970.0" layoutY="310.0" prefHeight="30.0" prefWidth="244.0" promptText="  department" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nameSection" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="368.0" prefHeight="30.0" prefWidth="229.0" promptText="  section" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="namePosition" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="978.0" layoutY="368.0" prefHeight="30.0" prefWidth="229.0" promptText="  position" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fx:id="nameImage" fitHeight="143.0" fitWidth="219.0" layoutX="841.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXTextField fx:id="nameFirstName" alignment="CENTER" focusColor="#f2533e" labelFloat="true" layoutX="680.0" layoutY="80.0" prefHeight="30.0" prefWidth="229.0" promptText="   first name" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#8bc9ec">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" layoutX="1190.0" layoutY="44.0" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #8BC9EC; -fx-background-radius: 50px;" textFill="#bf1111">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="640.0" layoutY="81.0" onAction="#SearchButton" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="Search" textFill="#bf1b1b" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtLastName" alignment="CENTER" focusColor="#8bc9ec" labelFloat="true" layoutX="934.0" layoutY="102.0" prefHeight="36.0" prefWidth="204.0" promptText="   Last Name" style="-fx-background-color: #FFFFFF22; -fx-background-radius: 50PX;" unFocusColor="#8bc9ec">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnback" buttonType="RAISED" layoutX="1224.0" layoutY="85.0" onAction="#backButton" prefHeight="42.0" prefWidth="86.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="Back" textFill="#5e5353" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

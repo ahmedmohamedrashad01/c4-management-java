@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="1365.0" style="-fx-background-color: #008A8A;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrefour2018.LoginPageController">
+   <children>
+      <HBox id="head" layoutX="302.0" layoutY="25.0" prefHeight="100.0" prefWidth="782.0" style="-fx-background-color: #1D87DC;">
+         <children>
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="397.0" text="Human Resource Management" textAlignment="CENTER" textFill="#030303">
+               <HBox.margin>
+                  <Insets left="200.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <effect>
+                  <DropShadow height="29.9" radius="33.7225" spread="0.24" width="106.99" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <Separator layoutX="308.0" layoutY="158.0" prefHeight="8.0" prefWidth="770.0" style="-fx-background-color: #1A3144; -fx-background-radius: 50px;" />
+      <JFXButton id="btn" fx:id="btnLogin" layoutX="623.0" layoutY="625.0" onAction="#login" onMouseEntered="#btnEnter" onMouseExited="#btnExit" prefHeight="40.0" prefWidth="120.0" ripplerFill="#adb5a4" style="-fx-background-radius: 50px; -fx-text-fill: #000000; -fx-background-color: #ffffff22; -fx-background-color: #1A86DB;" stylesheets="@Style.css" text="Login">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.23" topOpacity="0.27" />
+         </effect>
+      </JFXButton>
+      <Separator layoutX="318.0" layoutY="585.0" prefHeight="8.0" prefWidth="770.0" style="-fx-background-color: #1A3144; -fx-background-radius: 50px;" />
+      <Label alignment="CENTER" layoutX="474.0" layoutY="194.0" prefHeight="40.0" prefWidth="412.0" text="© Copyright 2018 Ahmed Rashad | Privacy" textFill="#463636" AnchorPane.bottomAnchor="490.0" AnchorPane.leftAnchor="474.0" AnchorPane.rightAnchor="479.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="Andalus" size="20.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.0" light="$null" specularConstant="2.0" specularExponent="40.0" surfaceScale="4.07">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <FlowPane layoutX="445.0" layoutY="230.0" prefHeight="345.0" prefWidth="475.0" style="-fx-background-color: #1A86DB;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.53" specularConstant="0.77" specularExponent="29.77" surfaceScale="4.52">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="304.53" elevation="128.72" />
+                     </light>
+                  </Lighting>
+               </effect>
+               <FlowPane.margin>
+                  <Insets left="80.0" top="10.0" />
+               </FlowPane.margin>
+            </ImageView>
+            <JFXTextField fx:id="txtUserName" focusColor="#d6165a" labelFloat="true" onMouseEntered="#userEnter" onMouseExited="#userExit" prefHeight="44.0" prefWidth="217.0" promptText="username" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#1a86db4d">
+               <font>
+                  <Font name="Andalus" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <FlowPane.margin>
+                  <Insets bottom="10.0" left="140.0" top="40.0" />
+               </FlowPane.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPssword" focusColor="#d6165a" labelFloat="true" onMouseEntered="#passEnter" onMouseExited="#passExit" prefHeight="44.0" prefWidth="217.0" promptText="password" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#1a86db">
+               <font>
+                  <Font name="Andalus" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <FlowPane.margin>
+                  <Insets bottom="10.0" left="140.0" top="30.0" />
+               </FlowPane.margin>
+            </JFXPasswordField>
+            <FontAwesomeIcon fill="#e8e8e8" iconName="KEY" selectionFill="#f5f5f5" size="2em">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" left="-300.0" top="40.0" />
+               </FlowPane.margin>
+            </FontAwesomeIcon>
+            <FontAwesomeIcon fill="#e8e8e8" iconName="USER" selectionFill="#f5f5f5" size="2em">
+               <FlowPane.margin>
+                  <Insets left="-25.0" top="-150.0" />
+               </FlowPane.margin>
+            </FontAwesomeIcon>
+         </children>
+      </FlowPane>
+      <ImageView fx:id="Image1" fitHeight="100.0" fitWidth="136.0" layoutX="150.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@m.JPG" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.25" color="#008a8a" height="32.86" radius="20.377499999999998" width="50.65" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="image2" fitHeight="100.0" fitWidth="136.0" layoutX="1150.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@m.JPG" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.25" color="#008a8a" height="32.86" radius="20.377499999999998" width="50.65" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

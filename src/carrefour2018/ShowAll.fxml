@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1368.0" style="-fx-background-color: #8BC9EC;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrefour2018.ShowAllController">
+   <children>
+      <FontAwesomeIcon fill="WHITE" iconName="EYE" layoutX="654.0" layoutY="43.0" selectionFill="#e8dbdb" size="5em" />
+      <TableView id="table-view" fx:id="tableView" layoutX="4.0" layoutY="60.0" prefHeight="478.0" prefWidth="1360.0" style="-fx-background-color: #ffffff55; -fx-text-fill: #F21729;" stylesheets="@Style.css">
+        <columns>
+          <TableColumn fx:id="idColumn" editable="false" prefWidth="48.0" text="ID" />
+          <TableColumn fx:id="firstColumn" editable="false" prefWidth="105.99996948242188" sortable="false" text="First" />
+            <TableColumn fx:id="lastColumn" editable="false" prefWidth="218.0" sortable="false" text="last Name" />
+            <TableColumn fx:id="ageColumn" editable="false" prefWidth="64.0" sortable="false" text="Age" />
+            <TableColumn fx:id="genderColumn" editable="false" prefWidth="86.0" sortable="false" text="Gender" />
+            <TableColumn fx:id="CountryColumn" editable="false" prefWidth="102.0" sortable="false" text="Country" />
+            <TableColumn fx:id="passportColumn" editable="false" prefWidth="102.0" sortable="false" text="Passport" />
+            <TableColumn fx:id="joinDateColumn" editable="false" prefWidth="133.0" sortable="false" text="Join Date" />
+            <TableColumn fx:id="mobileColumn" editable="false" prefWidth="117.0" sortable="false" text="Mobile" />
+            <TableColumn fx:id="departColumn" editable="false" prefWidth="83.0" sortable="false" text="Department" />
+            <TableColumn fx:id="sectionColumn" editable="false" prefWidth="96.0" sortable="false" text="Section" />
+            <TableColumn fx:id="position" editable="false" prefWidth="148.0" sortable="false" text="Position" />
+            <TableColumn fx:id="gradeColumn" editable="false" prefWidth="56.0" sortable="false" text="Grade" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="284.0" layoutY="588.0" onAction="#backButton" prefHeight="34.0" prefWidth="132.0" ripplerFill="#bf7777" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="627.0" layoutY="588.0" onAction="#deleteEmployee" prefHeight="34.0" prefWidth="175.0" ripplerFill="#bf7777" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="Delete Employee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1003.0" layoutY="588.0" onAction="#backButton" prefHeight="34.0" prefWidth="132.0" ripplerFill="#bf7777" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="Exit" textFill="#a10c0c">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
